@@ -425,6 +425,28 @@ body {
     margin-bottom: 50px;
 }
 
+/* Google Form Container */
+.google-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.google-form-container iframe {
+    display: block;
+    width: 100%;
+    min-height: 1200px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .google-form-container iframe {
+        min-height: 1400px;
+    }
+}
+
 .rsvp-form {
     max-width: 700px;
     margin: 0 auto;
