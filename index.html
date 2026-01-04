@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="wedding-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+        🔊
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="ornament top-ornament">❦</div>
+            <h1 class="couple-names">
+                <span class="bride-name">Bride Name</span>
+                <span class="ampersand">&</span>
+                <span class="groom-name">Groom Name</span>
+            </h1>
+            <p class="tagline">Together with their families</p>
+            <p class="tagline">Joyfully invite you to celebrate their wedding</p>
+            <div class="wedding-date">
+                <p class="date-text">Save the Date</p>
+                <p class="date-number">DD • MM • YYYY</p>
+            </div>
+            <div class="ornament bottom-ornament">❦</div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-content">
+                <p class="story-text">
+                    Every love story is beautiful, but ours is our favorite. From our first meeting to this 
+                    special day, every moment has been a blessing. We are excited to begin this new chapter 
+                    together and would be honored to have you celebrate with us.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+        <div class="container">
+            <h2 class="section-title">Wedding Details</h2>
+            
+            <div class="events-grid">
+                <!-- Ceremony -->
+                <div class="event-card">
+                    <div class="event-icon">💒</div>
+                    <h3 class="event-title">Ceremony</h3>
+                    <div class="event-info">
+                        <p class="event-time">⏰ 10:00 AM</p>
+                        <p class="event-location">📍 Ceremony Venue Name</p>
+                        <p class="event-address">Full Address Here</p>
+                    </div>
+                </div>
+
+                <!-- Reception -->
+                <div class="event-card">
+                    <div class="event-icon">🎉</div>
+                    <h3 class="event-title">Reception</h3>
+                    <div class="event-info">
+                        <p class="event-time">⏰ 6:00 PM</p>
+                        <p class="event-location">📍 Reception Venue Name</p>
+                        <p class="event-address">Full Address Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Link -->
+            <div class="map-section">
+                <a href="https://maps.google.com" target="_blank" class="btn-map">View Location on Map</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">Counting Down To Our Big Day</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-subtitle">We would be honored by your presence</p>
+            
+            <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/xykzbgwr" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select...</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5+">5+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="attendance">Will you be attending? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="yes" required>
+                            <span>Joyfully Accept</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="no" required>
+                            <span>Regretfully Decline</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Restrictions (Optional)</label>
+                    <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, Allergies, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message for the Couple (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Share your wishes..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send RSVP</button>
+                
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gift Registry Section -->
+    <section class="gift-section">
+        <div class="container">
+            <h2 class="section-title">Gift Registry</h2>
+            <p class="gift-text">
+                Your presence is the greatest gift of all. However, if you wish to honor us with a gift, 
+                a monetary contribution toward our future would be greatly appreciated.
+            </p>
+            <div class="gift-details">
+                <p><strong>Bank Account:</strong> Account Number Here</p>
+                <p><strong>Account Name:</strong> Account Holder Name</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Thank you for being part of our special day</p>
+            <div class="footer-names">Bride & Groom</div>
+            <div class="footer-ornament">❦</div>
+        </div>
+    </footer>
+
+    <script src="music-setup.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
