@@ -807,11 +807,28 @@ body {
     .gallery-section,
     .rsvp-section,
     .contact-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
     }
     
     .hero-section {
-        padding-top: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .hero-content {
+        margin-top: 0;
+    }
+    
+    .pre-title {
+        margin-bottom: 0.5rem;
+    }
+    
+    .couple-names {
+        margin: 0.5rem 0;
+    }
+    
+    .quran-verse {
+        margin-top: 1rem;
     }
 }
 
